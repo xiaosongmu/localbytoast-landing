@@ -8,6 +8,22 @@ export default {
       colors: {
         surface: '#F8F5F2',
       },
+      fontFamily: {
+        sans: [
+          'Source-Sans-Pro',
+          'system-ui',
+          '-apple-system',
+          '"Helvetica Neue"',
+          'Arial'
+        ],
+        effra: [
+          'Effra',
+          'system-ui',
+          '-apple-system',
+          '"Helvetica Neue"',
+          'Arial'
+        ],
+      },
     },
   },
   plugins: [],
