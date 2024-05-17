@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+import logo from "../images/local-by-toast.svg";
+import circleLogo from "../images/toast-logo-circle.svg";
+import pinkPerson from "../images/pink-person.jpg";
+import pig from "../images/pig-tophat.jpg";
+import  Button from "./Button.astro";
+---
+<div class="px-8 py-8 lg:px-12 lg:py-12">
+  <div class="bg-surface rounded-lg overflow-clip relative px-8 pb-8 ">
+    <div class="flex flex-1 min-h-44 mb-8">
+      <div class="flex gap-0 absolute -left-2">
+        <span class="h-20 bg-gradient-to-b from-[#FFC92D] to-[#FFBD0D] w-14 rounded-b-full "></span>
+        <span class="h-44 bg-gradient-to-b from-[#FF6220] to-[#FFA280] w-14 rounded-b-full flex items-end"><Image src={circleLogo} alt="Circle Toast Logo" /></span>
+        <span class="h-36 bg-gradient-to-b from-[#FFD3E5] to-[#FFD3E5] w-14  rounded-b-full flex flex-col-reverse gap-1 items-end overflow-clip"><Image src={pinkPerson} alt="Picture of a person smiling" class="rounded-full"/><Image src={pig} alt="Illustration of a pig in a hat" class="rounded-full" /></span>
+        <span class="h-32 bg-gradient-to-b from-[#ABCBAB] to-[#ABCBAB] w-14  rounded-b-full"></span>
+      </div>
+
+    </div>
+
+    <div class="max-w-80">
+      <Image src={logo} alt="Local by Toast" class="h-6" />
+      <h1 class="text-5xl font-semibold mb-3">Eat like a local.</h1>
+      <p class="text-lg mb-4">Tap into a vibrant community of local restaurants in the palm of your hands for food experiences that foster a rich sense of place.</p>
+      <Button text="Download Now" />
+    </div>
+
+    <!-- <div class="h-96 w-96 absolute right-0 bottom-0">
+      <Image src={phone} alt="Corner of a phone with Local by Toast app icon" class="object-cover" />
+    </div> -->
+  </div>
+</div>
