@@ -1,0 +1,19 @@
+---
+import * as content from "../pages/content/content.md";
+import Badge from "./Badge.astro";
+import ScrollableSection from "./ScrollableSection.astro";
+
+const { headline, description, badge } = content.frontmatter.toast_overview;
+---
+
+<div class="bg-[#252525] py-8 px-4">
+  <div class="container mx-auto text-center mt-8 mb-4 px-2">
+    <Badge text={badge} />
+    <h2 class="text-4xl font-effra my-4 font-medium text-white">
+      {headline}
+    </h2>
+    <p class="text-lg text-white">
+      {description}
+    </p>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+---
+import * as content from "../pages/content/content.md";
+import Badge from "./Badge.astro";
+
+const { headline, description, badge } = content.frontmatter.booking;
+---
+
+<div class="container mx-auto text-center mt-8 mb-4 px-2">
+  <Badge text={badge} />
+  <h2 class="text-4xl font-effra my-2 font-medium">
+    {headline}
+  </h2>
+  <p class="text-lg text-[#666666]">
+    {description}
+  </p>
+  <div class="flex flex-col lg:flex-row pb-10 gap-5">
+    <div class="mx-auto px-3">
+      <div
+        class="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
+      >
+      </div>
+    </div>
+    <div class="mx-auto px-3">
+      <div
+        class="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
+      >
+      </div>
+    </div>
+    <div class="mx-auto px-3">
+      <div
+        class="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
+      >
+      </div>
+    </div>
+    <div class="mx-auto px-3">
+      <div
+        class="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
+      >
+      </div>
+    </div>
+    <div class="mx-auto px-3">
+      <div
+        class="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
+      >
+      </div>
+    </div>
+    <div class="mx-auto px-3">
+      <div
+        class="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
+      >
+      </div>
+    </div>
+    <div class="mx-auto px-3">
+      <div
+        class="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
+      >
+      </div>
+    </div>
+    <div class="mx-auto px-3">
+      <div
+        class="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
+      >
+      </div>
+    </div>
+  </div>
+</div>

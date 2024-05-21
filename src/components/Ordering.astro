@@ -1,0 +1,23 @@
+---
+import * as content from "../pages/content/content.md";
+
+const { headline, description, image_subheaders } =
+  content.frontmatter.ordering;
+---
+
+<div class="flex flex-1 flex-col text-center bg-surface py-8 px-4">
+  <div class="mb-8">
+    <h2 class="text-4xl font-effra my-4 font-medium">
+      {headline}
+    </h2>
+    <p class="text-lg text-[#666666]">
+      {description}
+    </p>
+  </div>
+
+  <div class="flex flex-col lg:flex-row">
+    <p class="text-[#666666]">{image_subheaders.reorder}</p>
+    <p class="text-[#666666]">{image_subheaders.dining}</p>
+    <p class="text-[#666666]">{image_subheaders.search}</p>
+  </div>
+</div>

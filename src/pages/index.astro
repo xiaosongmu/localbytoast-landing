@@ -1,31 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
-import ScrollableSection from "../components/ScrollableSection.astro";
+import Overview from "../components/Overview.astro";
+import Ordering from "../components/Ordering.astro";
+import Booking from "../components/Booking.astro";
+import Loyalty from "../components/Loyalty.astro";
+import ToastOverview from "../components/ToastOverview.astro";
 ---
 
 <Layout title="Local by Toast: Eat like a local">
   <Header />
-  <div class="container mx-auto text-center mb-8">
-    <h2 class="text-4xl font-effra mb-1">
-      Celebrate local with our brand new app.
-    </h2>
-    <p class="text-lg">
-      Feel like a local: discover restaurants, make a reservation, order and pay
-      seamlessly.
-    </p>
-  </div>
-  <ScrollableSection />
-
-  <div class="flex flex-1 flex-col text-center bg-surface">
-    <h2 class="text-4xl font-effra mb-1">
-      The most seamless way to order food (with no fees)
-    </h2>
-    <p class="text-lg">
-      We power your local restaurants so our user-friendly app lets you order
-      and reorder, make reservations, skip the line, and more – all in one
-      simple place.
-    </p>
-    <ScrollableSection />
-  </div>
+  <Overview />
+  <Ordering />
+  <Booking />
+  <Loyalty />
+  <ToastOverview />
 </Layout>
