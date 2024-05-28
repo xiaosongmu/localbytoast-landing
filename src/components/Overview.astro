@@ -7,12 +7,12 @@ const { headline, description, badge } = content.frontmatter.app_overview;
 ---
 
 <div class="mb-6">
-  <div class="container mx-auto text-center mt-8 mb-4 px-2">
+  <div class="container mx-auto text-center mt-8 mb-4 px-2 max-w-xs">
     <Badge text={badge} />
-    <h2 class="text-4xl font-effra my-2 font-medium">
+    <h2 class="my-2">
       {headline}
     </h2>
-    <p class="text-lg text-[#666666]">
+    <p class="type-default text-secondary">
       {description}
     </p>
   </div>

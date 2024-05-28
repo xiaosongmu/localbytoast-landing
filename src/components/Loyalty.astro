@@ -5,14 +5,14 @@ const { headline, description, image_subheaders } = content.frontmatter.loyalty;
 ---
 
 <div class="flex flex-1 flex-col text-center py-8 px-4 bg-[#FFF4FE]">
-  <h2 class="text-4xl font-effra mb-1">
+  <h2 class="mb-1">
     {headline}
   </h2>
-  <p class="text-lg">
+  <p class="type-default text-secondary">
     {description}
   </p>
 
-  <div class="flex flex-col flex-1 lg:flex-row gap-4 text-center">
+  <div class="flex flex-col flex-1 lg:flex-row gap-4">
     <div class="w-24 h-96">
       <p class="text-[#666666]">{image_subheaders.ice_cream_header}</p>
       <p class="text-[#666666]">{image_subheaders.icecream_description}</p>

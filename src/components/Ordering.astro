@@ -1,23 +1,32 @@
 ---
+import usual from "../images/ordering/get-your-usual.png";
+import explore from "../images/ordering/explore-all.png";
+import activity from "../images/ordering/activity-scroll.png";
+
+import ImageOverText from "./ImageOverText.astro";
 import * as content from "../pages/content/content.md";
 
 const { headline, description, image_subheaders } =
   content.frontmatter.ordering;
 ---
 
-<div class="flex flex-1 flex-col text-center bg-surface py-8 px-4">
-  <div class="mb-8">
-    <h2 class="text-4xl font-effra my-4 font-medium">
-      {headline}
-    </h2>
-    <p class="text-lg text-[#666666]">
-      {description}
-    </p>
-  </div>
+<div class="bg-[#ECF7F7] py-10">
+  <div class="text-center">
+    <div class="mb-8 mx-auto max-w-xs lg:max-w-lg">
+      <h2 class="my-4">
+        {headline}
+      </h2>
+      <p class="type-default text-secondary">
+        {description}
+      </p>
+    </div>
 
-  <div class="flex flex-col lg:flex-row">
-    <p class="text-[#666666]">{image_subheaders.reorder}</p>
-    <p class="text-[#666666]">{image_subheaders.dining}</p>
-    <p class="text-[#666666]">{image_subheaders.search}</p>
+    <div
+      class="flex mx-auto max-w-xs lg:max-w-3xl flex-col lg:flex-row gap-10 lg:gap-4"
+    >
+      <ImageOverText img={usual} content={image_subheaders.reorder} />
+      <ImageOverText img={explore} content={image_subheaders.dining} />
+      <ImageOverText img={activity} content={image_subheaders.search} />
+    </div>
   </div>
 </div>
