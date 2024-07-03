@@ -3,10 +3,16 @@ import * as content from "../pages/content/content.md";
 import Badge from "./Badge.astro";
 import ScrollableSection from "./ScrollableSection.astro";
 
+import lSwoop from "../images/l-swoop.svg";
+import rSwoop from "../images/r-swoop.svg";
+import toastLogo from "../images/toast-logo-circle.svg";
+
+import { Image } from "astro:assets";
+
 const { headline, description, badge } = content.frontmatter.app_overview;
 ---
 
-<div class="mb-6">
+<div class="mb-6 relative pb-44">
   <div class="container mx-auto text-center mt-8 mb-4 px-2 max-w-xs">
     <Badge text={badge} />
     <h2 class="my-2">
@@ -18,4 +24,13 @@ const { headline, description, badge } = content.frontmatter.app_overview;
   </div>
 
   <ScrollableSection />
+  <div class="relative h-24">
+    <Image src={lSwoop} alt="left swoop" class="absolute top-0 left-0" />
+    <Image src={rSwoop} alt="right swoop" class="absolute top-0 right-0" />
+    <Image
+      src={toastLogo}
+      alt="toast logo"
+      class="absolute bottom-0 left-0 right-0 mx-auto max-w-32"
+    />
+  </div>
 </div>

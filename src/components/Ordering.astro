@@ -2,17 +2,19 @@
 import usual from "../images/ordering/get-your-usual.png";
 import explore from "../images/ordering/explore-all.png";
 import activity from "../images/ordering/activity-scroll.png";
-
+import sandwich from "../images/sub-sandwich.png";
+import taco from "../images/taco.png";
 import ImageOverText from "./ImageOverText.astro";
 import * as content from "../pages/content/content.md";
+import { Image } from "astro:assets";
 
 const { headline, description, image_subheaders } =
   content.frontmatter.ordering;
 ---
 
-<div class="bg-[#ECF7F7] py-10">
+<div class="bg-[#ECF7F7] pb-52 pt-44 relative">
   <div class="text-center">
-    <div class="mb-8 mx-auto max-w-xs lg:max-w-lg">
+    <div class="mb-8 mx-auto max-w-xs lg:max-w-lg relative">
       <h2 class="my-4">
         {headline}
       </h2>
@@ -28,5 +30,15 @@ const { headline, description, image_subheaders } =
       <ImageOverText img={explore} content={image_subheaders.dining} />
       <ImageOverText img={activity} content={image_subheaders.search} />
     </div>
+    <Image
+      src={sandwich}
+      alt="sub sandwich illustration"
+      class="absolute -bottom-[7rem] md:inset-y-0 -left-2 max-w-72"
+    />
+    <Image
+      src={taco}
+      alt="taco illustration"
+      class="absolute top-0 md:inset-y-0 -right-[1.5rem] max-w-60 lg:max-w-72"
+    />
   </div>
 </div>
