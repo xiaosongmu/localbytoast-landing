@@ -11,7 +11,7 @@ header:
 app_overview:
   headline: Celebrate local with our brand new app.
   description: "Feel like a local: discover restaurants, make a reservation, order and pay seamlessly."
-  badge: All New
+  badge: ALL New
 ordering:
   headline: The most seamless way to order food (with no fees)
   description: We power your local restaurants so our user-friendly app lets you order and reorder, make reservations, skip the line, and more – all in one simple place.

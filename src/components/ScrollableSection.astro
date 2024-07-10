@@ -3,68 +3,110 @@ import { Image } from "astro:assets";
 import overview1 from "../images/overview/overview-1.png";
 import overview2 from "../images/overview/overview-2.png";
 import overview3 from "../images/overview/overview-3.png";
+import overview4 from '../images/overview/Bookings.svg';
+import overview5 from '../images/overview/Onboarding 7.svg';
+import overview6 from '../images/overview/Onboarding 10.svg';
 ---
 
-<div class="flex overflow-x-scroll pb-10 hide-scroll-bar">
-  <div class="flex flex-nowrap lg:ml-40 md:ml-20 ml-10">
-    <div class="inline-block px-3">
+<div class="w-full overflow-x-visible relative z-20 pb-10">
+  <div id="scroll-container" class="flex overflow-x-scroll pb-10 hide-scroll-bar cursor-grab">
+    <div id="inner-container" class="flex flex-nowrap space-x-10">
       <Image
-        src={overview1}
-        class="w-[228px] h-auto overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out"
+        src={overview6}
+        class="w-[355.15px] rounded-lg"
         alt="Overview 1"
+        draggable="false"
       />
-    </div>
-    <div class="inline-block px-3">
-      <div
-        class="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
-      >
-      </div>
-    </div>
-    <div class="inline-block px-3">
-      <div
-        class="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
-      >
-      </div>
-    </div>
-    <div class="inline-block px-3">
-      <div
-        class="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
-      >
-      </div>
-    </div>
-    <div class="inline-block px-3">
-      <div
-        class="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
-      >
-      </div>
-    </div>
-    <div class="inline-block px-3">
-      <div
-        class="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
-      >
-      </div>
-    </div>
-    <div class="inline-block px-3">
-      <div
-        class="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
-      >
-      </div>
-    </div>
-    <div class="inline-block px-3">
-      <div
-        class="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
-      >
-      </div>
+      <Image
+        src={overview6}
+        class="w-[355.15px] rounded-lg"
+        alt="Overview 2"
+        draggable="false"
+      />
+      <Image
+        src={overview5}
+        class="w-[355.15px] rounded-lg"
+        alt="Overview 3"
+        draggable="false"
+      />
+      <Image
+        src={overview6}
+        class="w-[355.15px] rounded-lg"
+        alt="Overview 4"
+        draggable="false"
+      />
+      <Image
+        src={overview5}
+        class="w-[355.15px] rounded-lg"
+        alt="Overview 5"
+        draggable="false"
+      />
     </div>
   </div>
 </div>
 
 <style>
   .hide-scroll-bar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
   }
   .hide-scroll-bar::-webkit-scrollbar {
-    display: none;
+    display: none;  /* Safari and Chrome */
+  }
+
+  #scroll-container {
+    cursor: grab;
+    transition: margin-left 0.3s ease;
+  }
+
+  #scroll-container:active {
+    cursor: grabbing;
   }
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const container = document.getElementById('scroll-container');
+    const innerContainer = document.getElementById('inner-container');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    const updateMarginLeft = () => {
+      const screenWidth = window.innerWidth;
+      const marginLeft = Math.max(0, (screenWidth - 1024) / 3); // Adjust 1024 to the desired breakpoint
+      innerContainer.style.marginLeft = `${marginLeft}px`;
+    };
+
+    // Initial margin update
+    updateMarginLeft();
+
+    // Update margin on window resize
+    window.addEventListener('resize', updateMarginLeft);
+
+    container.addEventListener('mousedown', (e) => {
+      isDown = true;
+      container.classList.add('active');
+      startX = e.pageX - container.offsetLeft;
+      scrollLeft = container.scrollLeft;
+    });
+
+    container.addEventListener('mouseleave', () => {
+      isDown = false;
+      container.classList.remove('active');
+    });
+
+    container.addEventListener('mouseup', () => {
+      isDown = false;
+      container.classList.remove('active');
+    });
+
+    container.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - container.offsetLeft;
+      const walk = (x - startX) * 2; // The multiplier can be adjusted for sensitivity
+      container.scrollLeft = scrollLeft - walk;
+    });
+  });
+</script>
