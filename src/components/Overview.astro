@@ -14,8 +14,8 @@ const { headline, description, badge } = content.frontmatter.app_overview;
 ---
 
 <div class="mb-6 relative pb-22">
-  <div class="container mx-auto text-center mt-8 mb-4 px-2 max-w-xs">
-    <Badge text={badge} />
+  <div class="container mx-auto text-center mt-8 mb-4 px-2 max-w-sm md:max-w-2xl">
+    <Badge class="w-full" text={badge} />
     <h2 class="my-2">
       {headline}
     </h2>
@@ -25,6 +25,6 @@ const { headline, description, badge } = content.frontmatter.app_overview;
   </div>
 
   <ScrollableSection />
-  <Image src={swooshes} alt="swooshes" class="absolute top-[300px] left-0 w-full h-auto z-10" />
+  <!-- <Image src={swooshes} alt="swooshes" class="absolute top-[300px] left-0 w-full h-auto z-10" /> -->
 
 </div>

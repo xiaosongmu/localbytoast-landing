@@ -9,12 +9,12 @@ header:
     cloud: A fluffy cloud
     phone: A hand holding a phone
 app_overview:
-  headline: Celebrate local with our brand new app.
-  description: "Feel like a local: discover restaurants, make a reservation, order and pay seamlessly."
+  headline: Your coffee shop to your corner bar, now even closer to home.
+  description: Faster, simpler ordering in the palm of your hand will help you feel like a regular no matter where you dine. 
   badge: ALL New
 ordering:
   headline: The most seamless way to order food (with no fees)
-  description: We power your local restaurants so our user-friendly app lets you order and reorder, make reservations, skip the line, and more – all in one simple place.
+  description: Order ahead and skip the line, make reservations, or get it delivered. The Local app is designed for all the ways you restaurant, with the same price every time.
   image_subheaders:
     reorder: One-click reorder
     dining: Dining history

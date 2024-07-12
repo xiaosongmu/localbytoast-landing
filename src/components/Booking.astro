@@ -16,10 +16,10 @@ const { headline, description, badge } = content.frontmatter.booking;
   <div class="flex flex-col-reverse md:flex-row items-center justify-between max-w-screen-xl w-full mx-auto min-h-full">
 
     <div class="flex-1 flex flex-col justify-between order-3 md:order-2 md:ml-8 md:mt-8 md:min-h-[600px]">
-      <div class="mt-8 md:mt-28 order-1 md:order-1 mb-8 mx-auto md:mb-4">
+      <div class="mt-8 md:mt-28 order-1 md:order-1 mb-8 mx-auto md:mb-4 md:text-start text-center">
         <Badge text={badge} />
         <h2 class="my-4">{headline}</h2>
-        <p>{description}</p>
+        <h3>{description}</h3>
         <button class="bg-yellow-500 py-3 rounded-lg mt-4">Download Now</button>
       </div>
       <div class="w-full order-3 md:order-3">

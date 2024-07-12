@@ -4,6 +4,6 @@ const { img, content } = Astro.props;
 ---
 
 <div>
-  <Image src={img} alt={content} />
+  <Image class="md:max-w-[300px]" src={img} alt={content} />
   <p class="text-secondary md:text-lg">{content}</p>
 </div>
