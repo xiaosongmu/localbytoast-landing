@@ -3,13 +3,16 @@ import { Image } from "astro:assets";
 import overview1 from "../images/overview/overview-1.png";
 import overview2 from "../images/overview/overview-2.png";
 import overview3 from "../images/overview/overview-3.png";
-import overview4 from '../images/overview/Bookings.svg';
-import overview5 from '../images/overview/Onboarding 7.svg';
-import overview6 from '../images/overview/Onboarding 10.svg';
+import overview4 from "../images/overview/Bookings.svg";
+import overview5 from "../images/overview/Onboarding 7.svg";
+import overview6 from "../images/overview/Onboarding 10.svg";
 ---
 
 <div class="w-full overflow-x-visible relative z-20 pb-10">
-  <div id="scroll-container" class="flex overflow-x-scroll pb-10 hide-scroll-bar cursor-grab">
+  <div
+    id="scroll-container"
+    class="flex overflow-x-scroll pb-10 hide-scroll-bar cursor-grab"
+  >
     <div id="inner-container" class="flex flex-nowrap space-x-10">
       <Image
         src={overview6}
@@ -47,11 +50,11 @@ import overview6 from '../images/overview/Onboarding 10.svg';
 
 <style>
   .hide-scroll-bar {
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
   }
   .hide-scroll-bar::-webkit-scrollbar {
-    display: none;  /* Safari and Chrome */
+    display: none; /* Safari and Chrome */
   }
 
   #scroll-container {
@@ -65,48 +68,50 @@ import overview6 from '../images/overview/Onboarding 10.svg';
 </style>
 
 <script>
-  document.addEventListener('DOMContentLoaded', (event) => {
-    const container = document.getElementById('scroll-container');
-    const innerContainer = document.getElementById('inner-container');
-    let isDown = false;
-    let startX;
-    let scrollLeft;
+  const container = document.getElementById("scroll-container");
+  const innerContainer = document.getElementById("inner-container");
+  let isDown = false;
+  let startX: number;
+  let scrollLeft: number;
 
-    const updateMarginLeft = () => {
-      const screenWidth = window.innerWidth;
-      const marginLeft = Math.max(0, (screenWidth - 1024) / 3); // Adjust 1024 to the desired breakpoint
+  const updateMarginLeft = () => {
+    const screenWidth = window.innerWidth;
+    const marginLeft = Math.max(0, (screenWidth - 1024) / 3); // Adjust 1024 to the desired breakpoint
+    if (innerContainer) {
       innerContainer.style.marginLeft = `${marginLeft}px`;
-    };
+    }
+  };
 
-    // Initial margin update
-    updateMarginLeft();
+  // Initial margin update
+  updateMarginLeft();
 
-    // Update margin on window resize
-    window.addEventListener('resize', updateMarginLeft);
+  // Update margin on window resize
+  window.addEventListener("resize", updateMarginLeft);
 
-    container.addEventListener('mousedown', (e) => {
+  if (container) {
+    container.addEventListener("mousedown", (e) => {
       isDown = true;
-      container.classList.add('active');
+      container.classList.add("active");
       startX = e.pageX - container.offsetLeft;
       scrollLeft = container.scrollLeft;
     });
 
-    container.addEventListener('mouseleave', () => {
+    container.addEventListener("mouseleave", () => {
       isDown = false;
-      container.classList.remove('active');
+      container.classList.remove("active");
     });
 
-    container.addEventListener('mouseup', () => {
+    container.addEventListener("mouseup", () => {
       isDown = false;
-      container.classList.remove('active');
+      container.classList.remove("active");
     });
 
-    container.addEventListener('mousemove', (e) => {
+    container.addEventListener("mousemove", (e) => {
       if (!isDown) return;
       e.preventDefault();
       const x = e.pageX - container.offsetLeft;
       const walk = (x - startX) * 2; // The multiplier can be adjusted for sensitivity
       container.scrollLeft = scrollLeft - walk;
     });
-  });
+  }
 </script>
