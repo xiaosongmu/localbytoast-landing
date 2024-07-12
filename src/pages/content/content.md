@@ -1,7 +1,7 @@
 ---
 header:
   headline: Eat like a local.
-  description: Tap into a vibrant community of local restaurants in the palm of your hands for food experiences that foster a rich sense of place.
+  description: Neighborhood hotspots and hidden gems, just a couple taps away.
   buttonText: Download Now
   altText:
     logo: Local by Toast
