@@ -1,6 +1,6 @@
 ---
 header:
-  headline: Eat like a local.
+  headline: Eat like a local
   description: Neighborhood hotspots and hidden gems, just a couple taps away.
   buttonText: Download Now
   altText:
