@@ -6,5 +6,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
   site: 'https://xiaosongmu.github.io/localbytoast-landing/',
-  base: 'localbytoast-landing'
+  base: '/localbytoast-landing'
 });
