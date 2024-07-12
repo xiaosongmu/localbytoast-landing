@@ -2,8 +2,8 @@
 import { getImage, Image } from "astro:assets";
 import logo from "../images/local-by-toast.svg";
 import cloud from "../images/cloud.svg";
-import phone from "../images/phone-hand.png";
-import city from "../images/city.png";
+import phone from "../images/header/hand.svg";
+import city from "../images/header/Neighborhood Hero.svg";
 import Button from "./Button.astro";
 import * as content from "../pages/content/content.md";
 
@@ -12,47 +12,32 @@ const optimizedBackgroundImage = await getImage({ src: city });
 const { headline, description, buttonText, altText } =
   content.frontmatter.header;
 ---
-
 <div class="px-5 pt-5 lg:px-12 lg:py-12 relative mb-12">
-  <div
-    class="bg-gradient-to-b from-[#D3E8FF] to-white rounded-lg overflow-clip px-8"
-  >
-    <div
-      class="mx-auto max-w-7xl text-center pt-10 lg:flex lg:text-left lg:px-8 lg:pt-32"
-    >
-      <div
-        class="mx-auto max-w-xs mt-4 flex-shrink-0 mb-8 lg:max-w-md relative z-20"
-      >
-        <Image
-          src={logo}
-          alt={altText.logo}
-          class="w-32 lg:w-44 mx-auto lg:mx-0"
-        />
+  <div class="bg-gradient-to-b from-[#D3E8FF] to-white rounded-lg overflow-hidden px-8 h-[600px] md:h-[800px]">
+    <div class="relative mx-auto max-w-7xl text-center pt-10 lg:flex lg:text-left lg:px-8 lg:pt-32">
+      <!-- Text Stuff -->
+      <div class="max-w-xs mt-4 flex-shrink-0 md:max-w-lg z-20 relative">
+        <Image src={logo} alt={altText.logo} class="w-32 lg:w-44 mx-auto lg:mx-0"/>
         <h1 class="mt-3 md:mt-5 md:text-6xl">
           {headline}
         </h1>
-        <div class="md:w-full max-w-60 mx-auto lg:mx-0">
+        <div class="md:w-full max-w-xl">
           <p class="mb-5 mt-2 z-10 type-default text-secondary md:text-lg">
             {description}
           </p>
         </div>
-
         <Button text={buttonText} />
       </div>
-
-      <div class="relative z-20">
-        <Image src={phone} alt={altText.phone} class="w-60 lg:w-80 z-20" />
-      </div>
     </div>
-    <!-- <Image src={city} alt={altText.city} class="absolute h-[70vh] lg:h-[80vh] w-full object-cover object-right opacity-30 " /> -->
-    <!-- <div class="absolute -z-10 bg-gradient-to-l from-white via-black to-black h-[70vh] lg:h-[80vh] w-full" /> -->
-    <!-- <div
-      class="absolute bottom-0 h-48 w-[80vw] bg-gradient-to-l from-white via-black to-black bg-no-repeat bg-cover"
-      style={`background-image: url('${optimizedBackgroundImage.src}')`}
-    >
-      HELLO
-    </div> -->
-
+    <!-- Hand -->
+    <div class="absolute bottom-0 right-[10%] z-20 h-[600px] md:h-[800px] flex items-end">
+      <Image src={phone} alt={altText.phone} class="max-h-[50%] md:max-h-[800px]" />
+    </div>
+    <!-- City Scape -->
+    <div class="absolute bottom-0 left-0 w-full z-10 px-12">
+      <Image src={city} alt="City Scape" class="w-full max-h-[500px]" />
+    </div>
+    <!-- Clouds -->
     <Image
       src={cloud}
       alt={altText.cloud}
@@ -70,3 +55,5 @@ const { headline, description, buttonText, altText } =
     />
   </div>
 </div>
+
+
