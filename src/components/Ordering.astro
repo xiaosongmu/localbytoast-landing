@@ -14,20 +14,24 @@ const { headline, description, image_subheaders } =
 
 <div class="bg-[#ECF7F7] pb-52 pt-44 relative overflow-hidden">
   <div class="text-center">
-    <div class="container mx-auto text-center mt-8 mb-4 px-2 max-w-sm md:max-w-2xl">
+    <div
+      class="container mx-auto text-center mt-8 mb-4 px-2 max-w-sm md:max-w-2xl"
+    >
       <h2 class="my-4">
         {headline}
       </h2>
-      <h3>
+      <h3 class="mb-8">
         {description}
       </h3>
     </div>
 
-    <div class="flex mx-auto max-w-xs lg:max-w-3xl flex-col lg:flex-row gap-10 lg:gap-4 items-center justify-center">
+    <div
+      class="flex mx-auto max-w-xs lg:max-w-3xl flex-col lg:flex-row gap-10 lg:gap-4 items-center justify-center"
+    >
       <ImageOverText img={usual} content={image_subheaders.reorder} />
       <ImageOverText img={explore} content={image_subheaders.dining} />
       <ImageOverText img={activity} content={image_subheaders.search} />
-    </div>    
+    </div>
 
     <!-- Sub Sandwich Illustration -->
     <Image
@@ -44,4 +48,3 @@ const { headline, description, image_subheaders } =
     />
   </div>
 </div>
-

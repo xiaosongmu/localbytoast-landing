@@ -1,39 +1,66 @@
 ---
 import * as content from "../pages/content/content.md";
 import { Image } from "astro:assets";
-import IceCreamSVG from '../images/loyalty/ice_cream.svg';
-import HomeScreenSVG from '../images/loyalty/home_loyalty.svg';
-import RxLoyaltySVG from '../images/loyalty/rx_loyalty.svg';
+import IceCreamSVG from "../images/loyalty/ice_cream.svg";
+import HomeScreenSVG from "../images/loyalty/home_loyalty.svg";
+import RxLoyaltySVG from "../images/loyalty/rx_loyalty.svg";
 
 const { headline, description, image_subheaders } = content.frontmatter.loyalty;
 ---
 
 <div class="flex flex-1 flex-col text-center py-8 bg-[#FFF4FE]">
-  <div class="md:my-10">
+  <div class="md:mt-10 md:mb-8 max-w-xl mx-auto">
     <h2 class="mb-1">
       {headline}
     </h2>
-    <h3 class="type-default text-secondary">
+    <h3 class="">
       {description}
     </h3>
   </div>
 
-  <div class="flex flex-col md:flex-row md:mt-10 flex-1 items-center justify-between max-w-screen-xl mx-auto gap-16">
-    <div class="flex-1 flex flex-col items-center md:items-start w-full md:w-auto md:mr-4">
-      <Image src={IceCreamSVG} alt="hand ice cream" class="md:h-[500px] h-[450px] max-w-full"/>
-      <p class="text-[#666666] md:text-center">{image_subheaders.ice_cream_header}</p>
-      <p class="text-[#666666] md:text-center">{image_subheaders.icecream_description}</p>
+  <div
+    class="flex flex-col md:flex-row md:mt-10 flex-1 items-center justify-between max-w-screen-xl mx-auto gap-16"
+  >
+    <div
+      class="flex-1 flex flex-col items-center md:items-start w-full md:w-auto md:mr-4"
+    >
+      <Image
+        src={IceCreamSVG}
+        alt="hand ice cream"
+        class="md:h-[500px] h-[450px] max-w-full"
+      />
+      <p class="text-[#666666] md:text-center">
+        {image_subheaders.ice_cream_header}
+      </p>
+      <p class="text-[#666666] md:text-center">
+        {image_subheaders.icecream_description}
+      </p>
     </div>
     <div class="flex-1 flex flex-col items-center w-full md:w-auto md:mr-4">
-      <Image src={HomeScreenSVG} alt="home screen loyalty page" class="md:h-[500px] max-w-full"/>
-      <p class="text-[#666666] md:text-center">{image_subheaders.join_header}</p>
-      <p class="text-[#666666] md:text-center">{image_subheaders.join_description}</p>
+      <Image
+        src={HomeScreenSVG}
+        alt="home screen loyalty page"
+        class="md:h-[500px] max-w-full"
+      />
+      <p class="text-[#666666] md:text-center">
+        {image_subheaders.join_header}
+      </p>
+      <p class="text-[#666666] md:text-center">
+        {image_subheaders.join_description}
+      </p>
     </div>
     <div class="flex-1 flex flex-col items-center w-full md:w-auto">
-      <Image src={RxLoyaltySVG} alt="restaurant loyalty page" class="md:h-[500px] max-w-full"/>
-      <p class="text-[#666666] text-center">{image_subheaders.tracking_header}</p>
-      <p class="text-[#666666] text-center">{image_subheaders.tracking_description}</p>
+      <Image
+        src={RxLoyaltySVG}
+        alt="restaurant loyalty page"
+        class="md:h-[500px] max-w-full"
+      />
+      <p class="text-[#666666] text-center">
+        {image_subheaders.tracking_header}
+      </p>
+      <p class="text-[#666666] text-center">
+        {image_subheaders.tracking_description}
+      </p>
     </div>
   </div>
 </div>
-
