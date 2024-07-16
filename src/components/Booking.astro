@@ -3,8 +3,8 @@ import * as content from "../pages/content/content.md";
 import Badge from "./Badge.astro";
 import booking from "../images/booking.png";
 import { Image } from "astro:assets";
-import PhoneSVG from "../images/booking/Phones.svg";
-import HostSVG from "../images/booking/Host.svg";
+import PhoneSVG from "../images/booking/phones.png";
+import HostSVG from "../images/booking/host.png";
 import Star1SVG from "../images/booking/Flourish.svg";
 import Star2SVG from "../images/booking/Flourish_2.svg";
 import Star3SVG from "../images/booking/Flourish_3.svg";
@@ -43,7 +43,7 @@ const { headline, description, badge } = content.frontmatter.booking;
       <Image
         src={PhoneSVG}
         alt="Phone mockup"
-        class="max-w-full md:h-[600px]"
+        class="md:max-w-[420px] h-auto"
       />
       <Image
         src={Star2SVG}

@@ -12,17 +12,29 @@ const { headline, description, image_subheaders } =
   content.frontmatter.ordering;
 ---
 
-<div class="bg-[#ECF7F7] pb-52 pt-44 relative overflow-hidden">
+<div class="bg-[#ECF7F7] pb-52 pt-44 md:py-32 relative overflow-hidden">
   <div class="text-center">
-    <div
-      class="container mx-auto text-center mt-8 mb-4 px-2 max-w-sm md:max-w-2xl"
-    >
-      <h2 class="my-4">
-        {headline}
-      </h2>
-      <h3 class="mb-8">
-        {description}
-      </h3>
+    <div class="relative w-full mt-8 mb-8 md:mb-12">
+      <div class="container mx-auto text-center px-2 max-w-sm md:max-w-2xl">
+        <h2 class="my-4">
+          {headline}
+        </h2>
+        <h3 class="mb-8">
+          {description}
+        </h3>
+        <Image
+          src={sandwich}
+          alt="sub sandwich illustration"
+          class="absolute -bottom-[90rem] md:inset-y-0 -left-2 max-w-72"
+        />
+
+        <!-- Taco Illustration -->
+        <Image
+          src={taco}
+          alt="taco illustration"
+          class="absolute -top-[14rem] sm:inset-y-0 -right-[1.5rem] max-w-60 lg:max-w-72"
+        />
+      </div>
     </div>
 
     <div
@@ -34,17 +46,5 @@ const { headline, description, image_subheaders } =
     </div>
 
     <!-- Sub Sandwich Illustration -->
-    <Image
-      src={sandwich}
-      alt="sub sandwich illustration"
-      class="absolute -bottom-[7rem] md:inset-y-0 -left-2 max-w-72"
-    />
-
-    <!-- Taco Illustration -->
-    <Image
-      src={taco}
-      alt="taco illustration"
-      class="absolute top-0 sm:inset-y-0 -right-[1.5rem] max-w-60 lg:max-w-72"
-    />
   </div>
 </div>
