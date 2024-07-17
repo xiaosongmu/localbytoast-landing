@@ -2,8 +2,8 @@
 import * as content from "../pages/content/content.md";
 import Badge from "./Badge.astro";
 import { Image } from "astro:assets";
-import CocktailsSVG from "../images/bestRestaurants/Cocktails Vignette.svg";
-import PhoneSVG from "../images/bestRestaurants/Frame 1000001202.svg";
+import CocktailsSVG from "../images/bestRestaurants/cocktails.png";
+import PhoneSVG from "../images/bestRestaurants/phone.png";
 
 const { headline, description, badge } = content.frontmatter.toast_overview;
 ---
@@ -12,7 +12,7 @@ const { headline, description, badge } = content.frontmatter.toast_overview;
   <div
     class="flex flex-col-reverse md:flex-row items-center justify-between max-w-6xl w-full mx-auto md:min-h-[855px]"
   >
-    <div class="flex-1 order-1 md:order-1 md:mb-0 md:max-h-full md:max-h-full">
+    <div class="flex-1 order-1 md:order-1 md:mb-0 md:max-h-full">
       <Image
         src={PhoneSVG}
         alt="Phone mockup"
