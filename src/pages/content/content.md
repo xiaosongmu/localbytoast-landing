@@ -13,19 +13,19 @@ app_overview:
   description: Faster, simpler ordering in the palm of your hand will help you feel like a regular no matter where you dine. 
   badge: ALL New
 ordering:
-  headline: The most seamless way to order food (with no fees)
+  headline: All the options. In one place. With zero hidden fees.
   description: Order ahead and skip the line, make reservations, or get it delivered. The Local app is designed for all the ways you restaurant, with the same price every time.
   image_subheaders:
     reorder: One-click reorder
-    dining: Dining history
+    dining: Dining history at any Toast restaurant
     search: Powerful filtering
 booking:
-  headline: Snag your favorite table like a boss.
-  description: Make, manage and track reservations from one convenient location.
+  headline: Snag your table in a snap.
+  description: Make, manage and track reservations from one convenient location, exclusively on Local by Toast.
   badge: All New
 loyalty:
-  headline: Your loyalty, rewarded.
-  description: Perks and points reward you for your loyalty, encouraging you to come back and get to know us even better.
+  headline: Regulars get rewarded.
+  description: Join thousands of restaurant loyalty programs and rack up points and perks.
   image_subheaders:
     icecream_header: Free scoops anyone?
     icecream_description: Earn and redeem exclusive rewards no matter how you order.
@@ -35,7 +35,7 @@ loyalty:
     tracking_description: in the app.
 toast_overview:
   headline: Find the best restaurants in your neighborhood
-  description: Toast is your local restaurant’s preferred channel. Since we don’t charge commission, our restaurant partners pass those savings on to you.
+  description: Restaurants on Toast pay no third-party fees. That's better for them, and better for you — they won't show up as added charges.
   badge: Only on toast
   buttonText: Download Now
 ---
