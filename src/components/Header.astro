@@ -2,8 +2,8 @@
 import { getImage, Image } from "astro:assets";
 import logo from "../images/local-by-toast.svg";
 import cloud from "../images/cloud.svg";
-import phone from "../images/header/hand.svg";
-import city from "../images/header/Neighborhood Hero.svg";
+import phone from "../images/header/hand.png";
+import city from "../images/header/Neighborhood Hero.png";
 import Button from "./Button.astro";
 import * as content from "../pages/content/content.md";
 
@@ -12,12 +12,21 @@ const optimizedBackgroundImage = await getImage({ src: city });
 const { headline, description, buttonText, altText } =
   content.frontmatter.header;
 ---
+
 <div class="px-5 pt-5 lg:px-12 lg:py-12 relative mb-12 mx-auto">
-  <div class="bg-gradient-to-b from-[#D3E8FF] to-white rounded-lg overflow-hidden px-8 h-[600px] md:h-[800px]">
-    <div class="relative mx-auto max-w-7xl text-center pt-10 lg:flex lg:text-left lg:px-8 lg:pt-32">
+  <div
+    class="bg-gradient-to-b from-[#D3E8FF] to-white rounded-lg overflow-hidden px-8 h-[600px] md:h-[800px]"
+  >
+    <div
+      class="relative mx-auto max-w-7xl text-center pt-10 lg:flex lg:text-left lg:px-8 lg:pt-32"
+    >
       <!-- Text Stuff -->
       <div class="max-w-xs mt-4 flex-shrink-0 md:max-w-lg z-20 relative">
-        <Image src={logo} alt={altText.logo} class="w-32 md:w-60 mx-auto md:mx-0"/>
+        <Image
+          src={logo}
+          alt={altText.logo}
+          class="w-32 md:w-60 mx-auto md:mx-0"
+        />
         <h1 class="mt-3 md:mt-5 md:text-6xl">
           {headline}
         </h1>
@@ -30,12 +39,18 @@ const { headline, description, buttonText, altText } =
       </div>
     </div>
     <div class="w-[2000px]">
-        <!-- Hand -->
-      <div class="absolute bottom-0 right-[10%] z-20 h-[600px] md:h-[800px] flex items-end">
-        <Image src={phone} alt={altText.phone} class="max-h-[50%] md:max-h-[800px]" />
+      <!-- Hand -->
+      <div class="absolute bottom-0 z-20 h-[600px] md:h-[800px] flex items-end">
+        <Image
+          src={phone}
+          alt={altText.phone}
+          class="max-h-[50%] md:max-h-[800px]"
+          height={657}
+          width={376}
+        />
       </div>
     </div>
-    
+
     <!-- City Scape -->
     <div class="absolute bottom-0 left-0 w-full z-10 px-12">
       <Image src={city} alt="City Scape" class="w-full max-h-[500px]" />
@@ -58,5 +73,3 @@ const { headline, description, buttonText, altText } =
     />
   </div>
 </div>
-
-

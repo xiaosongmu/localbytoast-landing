@@ -6,25 +6,26 @@ import ScrollableSection from "./ScrollableSection.astro";
 import lSwoop from "../images/l-swoop.svg";
 import rSwoop from "../images/r-swoop.svg";
 import toastLogo from "../images/toast-logo-circle.svg";
-import swooshes from '../images/overview/swooshes.svg';
+import swooshes from "../images/overview/swooshes.svg";
 
 import { Image } from "astro:assets";
 
 const { headline, description, badge } = content.frontmatter.app_overview;
 ---
 
-<div class="mb-6 relative pb-22">
-  <div class="container mx-auto text-center mt-8 mb-4 px-2 max-w-sm md:max-w-2xl">
+<div class="relative pb-22">
+  <div
+    class="container mx-auto text-center mt-8 mb-8 px-2 max-w-sm md:max-w-2xl"
+  >
     <Badge class="w-full" text={badge} />
     <h2 class="my-2">
       {headline}
     </h2>
-    <h3 class="type-default text-secondary">
+    <h3 class="leading-tight">
       {description}
     </h3>
   </div>
 
   <ScrollableSection />
   <!-- <Image src={swooshes} alt="swooshes" class="absolute top-[300px] left-0 w-full h-auto z-10" /> -->
-
 </div>
