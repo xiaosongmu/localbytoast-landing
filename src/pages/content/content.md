@@ -38,4 +38,15 @@ toast_overview:
   description: Restaurants on Toast pay no third-party fees. That's better for them, and better for you — they won't show up as added charges.
   badge: Only on toast
   buttonText: Download Now
+seo:
+  title: "Eat Like a Local with the Local by Toast App"
+  description: "Discover neighborhood hotspots and hidden gems with the Local by Toast app. Enjoy faster, simpler ordering and exclusive rewards at your favorite local restaurants."
+  keywords: "local restaurants, food app, order ahead, restaurant reservations, loyalty programs, hidden gems"
+  author: "Local by Toast"
+  ogType: "website"
+  ogTitle: "Eat Like a Local with the Local by Toast App"
+  ogDescription: "Discover neighborhood hotspots and hidden gems with the Local by Toast app. Enjoy faster, simpler ordering and exclusive rewards at your favorite local restaurants."
+  twitterCard: "summary_large_image"
+  twitterTitle: "Eat Like a Local with the Local by Toast App"
+  twitterDescription: "Discover neighborhood hotspots and hidden gems with the Local by Toast app. Enjoy faster, simpler ordering and exclusive rewards at your favorite local restaurants."
 ---

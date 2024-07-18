@@ -20,7 +20,17 @@ export default {
           '"Helvetica Neue"',
           'Arial'
         ],
-        mono: ['Menlo', 'Monaco', 'Consolas']
+        animation: {
+          'loop-scroll-slow': 'loop-scroll 400s linear infinite',
+          'loop-scroll-med': 'loop-scroll 300s linear infinite',
+          'loop-scroll-fast': 'loop-scroll 150s linear infinite',
+        },
+        keyframes: {
+          'loop-scroll': {
+            from: { transform: 'translateX(0)' },
+            to: { transform: 'translateX(-100vw)' },
+          },
+        },
       },
 
     },

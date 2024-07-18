@@ -5,6 +5,8 @@ import phone from "../images/header/hand.png";
 import city from "../images/header/Neighborhood Hero.png";
 import gradient from "../images/header/gradient.png";
 import Button from "./Button.astro";
+import cloud from "../images/cloud.svg";
+
 import * as content from "../pages/content/content.md";
 
 const cityBg = await getImage({ src: city, format: "webp" });
@@ -46,6 +48,22 @@ const { headline, description, buttonText, altText } =
     <div class="footer">
       <Image src={city} alt="City Scape" class="w-[83%]" />
     </div>
+
+    <Image
+      src={cloud}
+      alt={altText.cloud}
+      class="absolute top-1/2 right-[65%] w-20 z-10 loop-scroll-slow"
+    />
+    <Image
+      src={cloud}
+      alt={altText.cloud}
+      class="absolute top-1/4 right-3/4 w-24 z-10 loop-scroll-med"
+    />
+    <Image
+      src={cloud}
+      alt={altText.cloud}
+      class="absolute top-[15%] right-[45%] w-18 z-10 loop-scroll-fast"
+    />
   </div>
 </div>
 
@@ -77,6 +95,26 @@ const { headline, description, buttonText, altText } =
   .gradient {
     grid-area: 2 / 2 / 4 / 4;
     z-index: 3;
+  }
+  @keyframes loop-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100vw);
+    }
+  }
+
+  .loop-scroll-slow {
+    animation: loop-scroll 400s linear infinite;
+  }
+
+  .loop-scroll-med {
+    animation: loop-scroll 300s linear infinite;
+  }
+
+  .loop-scroll-fast {
+    animation: loop-scroll 150s linear infinite;
   }
 
   @media (max-width: 768px) {
