@@ -26,6 +26,7 @@ const { title } = Astro.props;
   </body>
 </html>
 <style is:global>
+  @import url("https://use.typekit.net/wnx2mve.css");
   @font-face {
     font-family: "Source-Sans-Pro";
     src: url("https://cdn.toasttab.com/static/273e44f3c591cc61089c4bb7fd21bdd0a6c7c965/fonts/SourceSansPro-Regular.ttf")
@@ -52,7 +53,7 @@ const { title } = Astro.props;
       format("truetype");
     font-weight: bold;
   }
-
+  /* 
   @font-face {
     font-family: "Effra";
     src: url("https://cdn.toasttab.com/static/273e44f3c591cc61089c4bb7fd21bdd0a6c7c965/fonts/Effra-StdRg.ttf")
@@ -71,7 +72,7 @@ const { title } = Astro.props;
     src: url("https://cdn.toasttab.com/static/273e44f3c591cc61089c4bb7fd21bdd0a6c7c965/fonts/Effra-Bold.ttf")
       format("truetype");
     font-weight: bold;
-  }
+  } */
 
   h1 {
     @apply font-effra text-4xl font-[500] lg:text-6xl;
