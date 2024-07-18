@@ -23,8 +23,8 @@ const { headline, description, badge } = content.frontmatter.booking;
         class="mt-8 md:mt-28 order-1 md:order-1 mb-8 mx-auto md:mb-4 md:text-start text-center"
       >
         <Badge text={badge} />
-        <h2 class="my-4">{headline}</h2>
-        <h3 class="mb-8">{description}</h3>
+        <h2 class="my-4 h2">{headline}</h2>
+        <h3 class="mb-8 h3">{description}</h3>
       </div>
       <div class="w-full order-3 md:order-3">
         <Image
@@ -37,7 +37,7 @@ const { headline, description, badge } = content.frontmatter.booking;
     <div class="flex-1 flex flex-row order-2 md:order-3 md:mb-0">
       <Image
         src={Star1SVG}
-        alt="Host"
+        alt="star"
         class="max-w-full h-auto mx-auto mb-0 hidden md:block"
       />
       <Image
@@ -47,7 +47,7 @@ const { headline, description, badge } = content.frontmatter.booking;
       />
       <Image
         src={Star2SVG}
-        alt="Host"
+        alt="star"
         class="max-w-full mb-0 hidden md:block"
       />
     </div>
