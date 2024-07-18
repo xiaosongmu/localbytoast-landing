@@ -14,7 +14,7 @@ export default {
           'Arial'
         ],
         effra: [
-          'Effra',
+          'effra-cc',
           'system-ui',
           '-apple-system',
           '"Helvetica Neue"',
