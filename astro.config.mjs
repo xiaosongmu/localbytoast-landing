@@ -4,6 +4,6 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://xiaosongmu.github.io/localbytoast-landing/',
-  base: '/localbytoast-landing'
+  site: 'https://xiaosongmu.github.io/localbytoast-inc/',
+  base: '/localbytoast-inc'
 });
